@@ -1,0 +1,135 @@
+/* rest */
+
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* grid geral */
+
+.estrutura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+}
+
+/* header */
+
+.header {
+    grid-area: header;
+    background: linear-gradient(135deg, #0095ff, blue);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.titulo-principal {
+    font-size: 36px;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    max-width: 175px;
+}
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1.125em;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.header nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header li + li {
+    margin-left: 30px;
+}
+
+/* content */
+
+.content {
+    grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.titulo {
+    font-family: Courier, monospace;
+    color: #0095ff;
+    font-size: 2.75em;
+    line-height: 1;
+    font-weight: 700;
+    align-self: center;
+}
+.atributos {
+    align-self: start;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    background: linear-gradient(135deg, #0095ff, blue);
+}
+.atributos li a {
+    color: white;
+}
+.atributos li {
+    color: white;
+    font-family: Courier, monospace;
+    font-size: 1.125em;
+    padding: 15px;
+}
+.atributos li + li {
+    border-top: 2px solid #0095ff;
+}
+
+/* footer */
+
+.footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #0095ff, blue);
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
